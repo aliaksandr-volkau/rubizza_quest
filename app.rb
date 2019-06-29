@@ -12,4 +12,6 @@ http.use_ssl = true
 
 request = Net::HTTP::Post.new(uri, {'Content-Type' => 'application/json'})
 request.body = data.to_json
+puts(request.body)
 response = http.request(request)
+puts(response.body)
